@@ -20,9 +20,14 @@ class MergeSort
       left[0] < right[0] ? num = left.shift : num = right.shift
       merged_numbers.push(num)
     end
+    
+    while (left.length > 0) do
+      merged_numbers.push(left.shift)
+    end
 
-    merged_numbers.push(left.shift) if left.length > 0
-    merged_numbers.push(right.shift) if right.length > 0
+    while (right.length > 0) do
+      merged_numbers.push(right.shift)
+    end
     merged_numbers
   end
 end
