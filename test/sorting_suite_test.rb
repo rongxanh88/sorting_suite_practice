@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require '../lib/bubble_sort.rb'
+require '../lib/merge_sort.rb'
 
 class TestBubbleSort < Minitest::Test
 
@@ -11,6 +12,12 @@ class TestBubbleSort < Minitest::Test
 
   def test_bubble_sort
     sorted = BubbleSort.sort(@numbers)
+
+    assert_equal(@expected, sorted)
+  end
+
+  def test_merge_sort
+    sorted = MergeSort.sort(@numbers)
 
     assert_equal(@expected, sorted)
   end
