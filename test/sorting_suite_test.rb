@@ -2,6 +2,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require '../lib/bubble_sort.rb'
 require '../lib/merge_sort.rb'
+require '../lib/insertion_sort.rb'
 
 class TestBubbleSort < Minitest::Test
 
@@ -18,6 +19,12 @@ class TestBubbleSort < Minitest::Test
 
   def test_merge_sort
     sorted = MergeSort.sort(@numbers)
+
+    assert_equal(@expected, sorted)
+  end
+
+  def test_insertion_sort_in_place
+    sorted = InsertionSort.sort_in_place(@numbers)
 
     assert_equal(@expected, sorted)
   end
