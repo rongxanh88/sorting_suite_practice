@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require '../bubble_sort.rb'
+require '../lib/bubble_sort.rb'
 
 class TestBubbleSort < Minitest::Test
 
